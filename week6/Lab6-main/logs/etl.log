@@ -1,0 +1,60 @@
+2026-08-11 14:11:05,376 | INFO | ETL started
+2026-08-11 14:11:05,380 | INFO | Extract customers  rows=62    cols=4   | ['customer_id', 'name', 'province', 'email']
+2026-08-11 14:11:05,380 | INFO | Extract orders     rows=183   cols=8   | ['order_id', 'customer_id', 'product_id', 'order_date', 'qty', 'unit_price', 'discount_pct', 'status']
+2026-08-11 14:11:05,380 | INFO | Extract products   rows=15    cols=4   | ['product_id', 'product_name', 'category.name', 'pricing.price']
+2026-08-11 14:11:05,381 | INFO | Extract stores     rows=3     cols=3   | ['store_id', 'store_name', 'province']
+2026-08-11 14:11:05,382 | INFO | Transform customers: drop duplicate customer_id = 2 rows
+2026-08-11 14:11:05,386 | INFO | Transform orders: drop duplicate order_id = 3 rows
+2026-08-11 14:11:05,410 | INFO | Transform orders: rejected by rule = 4 rows
+2026-08-11 14:11:05,411 | INFO | Transform orders: filtered out status not in ['completed', 'paid'] = 76 rows
+2026-08-11 14:11:05,418 | INFO | Transform merge: rejected unknown customer/product = 0 rows
+2026-08-11 14:11:05,421 | INFO | Transform done: sales=100 rows, total=192074.63, rejects=4 rows
+2026-08-11 14:11:05,437 | INFO | Load: dim_customer=60, dim_product=15 | fact_sales 0 -> 100 (new=100, skipped as duplicate=0)
+2026-08-11 14:11:05,438 | INFO | Load: warehouse = C:\Users\Prame\Claude\Projects\UNIVERSITY WORK GITHUB\Lab6\data\warehouse\warehouse.db
+2026-08-11 14:11:05,438 | INFO | Validate: PASS | checks={'row_count_match': True, 'no_duplicate_order_id': True, 'total_sales_match': True}
+2026-08-11 14:11:05,439 | INFO | ETL completed
+2026-08-11 14:11:07,178 | INFO | ETL started
+2026-08-11 14:11:07,181 | INFO | Extract customers  rows=62    cols=4   | ['customer_id', 'name', 'province', 'email']
+2026-08-11 14:11:07,182 | INFO | Extract orders     rows=183   cols=8   | ['order_id', 'customer_id', 'product_id', 'order_date', 'qty', 'unit_price', 'discount_pct', 'status']
+2026-08-11 14:11:07,182 | INFO | Extract products   rows=15    cols=4   | ['product_id', 'product_name', 'category.name', 'pricing.price']
+2026-08-11 14:11:07,182 | INFO | Extract stores     rows=3     cols=3   | ['store_id', 'store_name', 'province']
+2026-08-11 14:11:07,184 | INFO | Transform customers: drop duplicate customer_id = 2 rows
+2026-08-11 14:11:07,188 | INFO | Transform orders: drop duplicate order_id = 3 rows
+2026-08-11 14:11:07,211 | INFO | Transform orders: rejected by rule = 4 rows
+2026-08-11 14:11:07,212 | INFO | Transform orders: filtered out status not in ['completed', 'paid'] = 76 rows
+2026-08-11 14:11:07,219 | INFO | Transform merge: rejected unknown customer/product = 0 rows
+2026-08-11 14:11:07,222 | INFO | Transform done: sales=100 rows, total=192074.63, rejects=4 rows
+2026-08-11 14:11:07,226 | INFO | Load: dim_customer=60, dim_product=15 | fact_sales 100 -> 100 (new=0, skipped as duplicate=100)
+2026-08-11 14:11:07,226 | INFO | Load: warehouse = C:\Users\Prame\Claude\Projects\UNIVERSITY WORK GITHUB\Lab6\data\warehouse\warehouse.db
+2026-08-11 14:11:07,227 | INFO | Validate: PASS | checks={'row_count_match': True, 'no_duplicate_order_id': True, 'total_sales_match': True}
+2026-08-11 14:11:07,228 | INFO | ETL completed
+2026-08-11 14:39:29,495 | INFO | ETL started
+2026-08-11 14:39:29,519 | INFO | Extract customers  rows=62    cols=4   | ['customer_id', 'name', 'province', 'email']
+2026-08-11 14:39:29,520 | INFO | Extract orders     rows=183   cols=8   | ['order_id', 'customer_id', 'product_id', 'order_date', 'qty', 'unit_price', 'discount_pct', 'status']
+2026-08-11 14:39:29,521 | INFO | Extract products   rows=15    cols=4   | ['product_id', 'product_name', 'category.name', 'pricing.price']
+2026-08-11 14:39:29,521 | INFO | Extract stores     rows=3     cols=3   | ['store_id', 'store_name', 'province']
+2026-08-11 14:39:29,523 | INFO | Transform customers: drop duplicate customer_id = 2 rows
+2026-08-11 14:39:29,530 | INFO | Transform orders: drop duplicate order_id = 3 rows
+2026-08-11 14:39:29,561 | INFO | Transform orders: rejected by rule = 4 rows
+2026-08-11 14:39:29,563 | INFO | Transform orders: filtered out status not in ['completed', 'paid'] = 76 rows
+2026-08-11 14:39:29,575 | INFO | Transform merge: rejected unknown customer/product = 0 rows
+2026-08-11 14:39:29,579 | INFO | Transform done: sales=100 rows, total=192074.63, rejects=4 rows
+2026-08-11 14:39:29,596 | INFO | Load: dim_customer=60, dim_product=15 | fact_sales 100 -> 100 (new=0, skipped as duplicate=100)
+2026-08-11 14:39:29,597 | INFO | Load: warehouse = /sessions/hopeful-sleepy-edison/mnt/UNIVERSITY WORK GITHUB/Lab6/data/warehouse/warehouse.db
+2026-08-11 14:39:29,603 | INFO | Validate: PASS | checks={'row_count_match': True, 'no_duplicate_order_id': True, 'total_sales_match': True}
+2026-08-11 14:39:29,607 | INFO | ETL completed
+2026-08-11 14:39:30,386 | INFO | ETL started
+2026-08-11 14:39:30,399 | INFO | Extract customers  rows=62    cols=4   | ['customer_id', 'name', 'province', 'email']
+2026-08-11 14:39:30,400 | INFO | Extract orders     rows=183   cols=8   | ['order_id', 'customer_id', 'product_id', 'order_date', 'qty', 'unit_price', 'discount_pct', 'status']
+2026-08-11 14:39:30,400 | INFO | Extract products   rows=15    cols=4   | ['product_id', 'product_name', 'category.name', 'pricing.price']
+2026-08-11 14:39:30,401 | INFO | Extract stores     rows=3     cols=3   | ['store_id', 'store_name', 'province']
+2026-08-11 14:39:30,402 | INFO | Transform customers: drop duplicate customer_id = 2 rows
+2026-08-11 14:39:30,408 | INFO | Transform orders: drop duplicate order_id = 3 rows
+2026-08-11 14:39:30,429 | INFO | Transform orders: rejected by rule = 4 rows
+2026-08-11 14:39:30,430 | INFO | Transform orders: filtered out status not in ['completed', 'paid'] = 76 rows
+2026-08-11 14:39:30,437 | INFO | Transform merge: rejected unknown customer/product = 0 rows
+2026-08-11 14:39:30,441 | INFO | Transform done: sales=100 rows, total=192074.63, rejects=4 rows
+2026-08-11 14:39:30,457 | INFO | Load: dim_customer=60, dim_product=15 | fact_sales 100 -> 100 (new=0, skipped as duplicate=100)
+2026-08-11 14:39:30,457 | INFO | Load: warehouse = /sessions/hopeful-sleepy-edison/mnt/UNIVERSITY WORK GITHUB/Lab6/data/warehouse/warehouse.db
+2026-08-11 14:39:30,464 | INFO | Validate: PASS | checks={'row_count_match': True, 'no_duplicate_order_id': True, 'total_sales_match': True}
+2026-08-11 14:39:30,468 | INFO | ETL completed
