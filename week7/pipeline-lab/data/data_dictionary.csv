@@ -1,0 +1,17 @@
+sheet,field,type_expected,description,quality_rule
+customers,customer_id,string,Customer business key,Required and unique; format Cdddd
+customers,province,category,Province,Must map to approved province values
+products,product_id,string,Product business key,Required and unique; format Pddd
+products,unit_price,decimal,Current reference price,Greater than 0
+orders_batch_*,order_id,string,Order transaction key,Required; deduplicate by latest updated_at
+orders_batch_*,order_datetime,datetime,Transaction time,Parseable; invalid values become quarantine records
+orders_batch_*,customer_id,string,Customer foreign key,Must exist in customers
+orders_batch_*,product_id,string,Product foreign key,Must exist in products
+orders_batch_*,quantity,integer,Units sold,Integer from 1 to 20
+orders_batch_*,unit_price,decimal,Price at transaction,Numeric and greater than 0
+orders_batch_*,discount_pct,decimal,Discount percent,0 to 100
+orders_batch_*,payment_method,category,Payment method,Normalize case and approved labels
+orders_batch_*,sales_channel,category,Sales channel,Map E-Commerce to Online
+orders_batch_*,updated_at,datetime,Last update timestamp,Use for upsert/deduplication
+derived,gross_amount,decimal,quantity * unit_price,Calculated after validation
+derived,net_amount,decimal,gross_amount * (1-discount_pct/100),Non-negative
